@@ -94,3 +94,4 @@ function exe10() {
   alert("o resultado é :" + sub);
   document.getElementById("area").innerText = " A ARÉA DO LOSANGO É:" + sub;
 }
+function lista2() {}
