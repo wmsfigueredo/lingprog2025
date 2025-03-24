@@ -1,45 +1,87 @@
 function exe11() {
-  //vamos usar dom para recuperar dados hmtl
-  let nro1 = Number(document.getElementById("nro1").value);
-  let nro2 = Number(document.getElementById("nro2").value);
-  let sub = (nro1 * nro2) / 2;
-
-  alert("o resultado é :" + sub);
-  document.getElementById("area").innerText = " A ARÉA DO LOSANGO É:" + sub;
+  // recupera os dados do usuário
+  let nota1 = Number(document.getElementById("nota1").value);
+  let nota2 = Number(document.getElementById("nota2").value);
+  let nota3 = Number(document.getElementById("nota3").value);
+  let nota4 = Number(document.getElementById("nota4").value);
+  // calcular média
+  let media = (nota1 + nota2 + nota3 + nota4) / 4;
+  if (media >= 7) {
+    document.getElementById("media").innerText = "Aprovado com média " + media;
+  } else {
+    document.getElementById("media").innerText = "Reprovado com média " + media;
+  }
 }
 function exe12() {
-  //vamos usar dom para recuperar dados hmtl
-  let nro1 = Number(document.getElementById("nro1").value);
-  let nro2 = Number(document.getElementById("nro2").value);
-  let salario = nro2 / nro1;
-  let sub = alert("o resultado é :" + salario + " Salarios");
-  document.getElementById("salario").innerText =
-    " ganha o total de :" + salario + " Salários mininos";
-}
-function exe13() {
-  // Vamos usar DOM para recuperar dados HTML
-  let nro1 = Number(document.getElementById("nro1").value);
-  let tabuada = "";
-
-  for (let i = 1; i <= 10; i++) {
-    tabuada = +i + "x" + nro1 + " = " + nro1 * i + "<br>";
+  // recupera os dados do usuário
+  let nota1 = Number(document.getElementById("nota1").value);
+  let nota2 = Number(document.getElementById("nota2").value);
+  // calcula média
+  let media = (nota1 + nota2) / 2;
+  if (media >= 0 && media < 3) {
+    document.getElementById("media").innerHTML = "Reprovado " + media;
+  } else if (media >= 3 && media < 7) {
+    document.getElementById("media").innerHTML = "Exame " + media;
+  } else if (media >= 7 && media <= 10) {
+    document.getElementById("media").innerHTML = "Aprovado " + media;
+  } else {
+    document.getElementById("media").innerHTML = "Problema com notas";
   }
-
-  document.getElementById("Tabuada").innerText = tabuada;
 }
-function exe14() {
-  //vamos usar dom para recuperar dados hmtl
+
+function exe13() {
+  // recupera os dados do usuário
   let nro1 = Number(document.getElementById("nro1").value);
   let nro2 = Number(document.getElementById("nro2").value);
-  let sub = nro1 - nro2;
-  let sub2 = sub * 12;
-  let sub3 = sub * 365;
-  let sub4 = sub2 * 4;
+  // calcula o menor e mostra o resultado
+  if (nro1 < nro2) {
+    document.getElementById("menor").innerText = "O menor é " + nro1;
+  } else if (nro2 < nro1) {
+    document.getElementById("menor").innerText = "O menor é " + nro2;
+  } else {
+    document.getElementById("menor").innerText = "Os dois são iguais";
+  }
+}
 
-  alert("o resultado é :" + sub);
-  document.getElementById("idade").innerText = " a idade em anos é: " + sub;
-  document.getElementById("idade2").innerText = " a idade em meses é: " + sub2;
-  document.getElementById("idade3").innerText = " a idade em dias é " + sub3;
-  document.getElementById("idade4").innerText =
-    " a idade em semanas é: " + sub4;
+function exe14() {
+  // recupera os dados do usuário
+  let nro1 = Number(document.getElementById("nro1").value);
+  let nro2 = Number(document.getElementById("nro2").value);
+  let nro3 = Number(document.getElementById("nro3").value);
+  // calcula o maior deles
+  if (nro1 >= nro2 && nro1 >= nro3) {
+    document.getElementById("maior").innerHTML = "O maior é " + nro1;
+  } else if (nro2 >= nro1 && nro2 >= nro3) {
+    document.getElementById("maior").innerHTML = "O maior é " + nro2;
+  } else if (nro3 >= nro1 && nro3 >= nro2) {
+    document.getElementById("maior").innerHTML = "O maior é " + nro3;
+  }
+}
+function exe15() {
+  // recupera os dados do usuário
+  let nro1 = Number(document.getElementById("nro1").value);
+  let nro2 = Number(document.getElementById("nro2").value);
+  let selecao = Number(document.getElementById("selecao").value);
+  // utilização do escolha
+  switch (selecao) {
+    case 1:
+      document.getElementById("result").innerText = (nro1 + nro2) / 2;
+      break;
+    case 2:
+      if (nro1 >= nro2) {
+        document.getElementById("result").innerText = nro1 - nro2;
+      } else {
+        document.getElementById("result").innerText = nro2 - nro1;
+      }
+      break;
+    case 3:
+      document.getElementById("result").innerText = nro1 * nro2;
+      break;
+    case 4:
+      if (nro2 != 0) {
+        document.getElementById("result").innerText = nro1 / nro2;
+      } else {
+        document.getElementById("result").innerText = "Divisão por zero";
+      }
+  }
 }

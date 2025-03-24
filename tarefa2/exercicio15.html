@@ -36,17 +36,21 @@
     </div>
     <div class="container">
       <div class="card">
-        <h1>Exercício 14</h1>
+        <h1>Exercício 15</h1>
         <form>
-          <label> Numero </label>
+          <label> Número 1 </label>
           <input type="number" id="nro1" />
-          <label> Numero </label>
+          <label> Número 2 </label>
           <input type="number" id="nro2" />
-          <label> Numero </label>
-          <input type="number" id="nro3" />
-
-          <button onclick="exe14()" type="button">Calcular</button>
-          <label id="maior"> O resultado é: </label>
+          <label> Escolha a sua opção </label>
+          <select id="selecao">
+            <option value="1">Média dos números</option>
+            <option value="2">Diferença dos números</option>
+            <option value="3">Produto dos números</option>
+            <option value="4">Divisão dos números</option>
+          </select>
+          <button onclick="exe15()" type="button">Calcular</button>
+          <label id="result"> O resultado é: </label>
         </form>
       </div>
     </div>
