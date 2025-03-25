@@ -23,7 +23,7 @@ button {
   cursor: pointer; /* ponteiro do mouse */
 }
 button:hover {
-  background-color: #f3a4b8;
+  background-color: #a4a9f3;
 }
 
 .image {
