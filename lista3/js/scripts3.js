@@ -84,26 +84,15 @@ function exe5() {
   document.getElementById("resultado").innerHTML = resultado;
 }
 function exe6() {
-  let codigo,
-    valor,
-    totalVista = 0,
-    totalPrazo = 0;
-  for (let i = 1; i <= 5; i++) {
-    do {
-      codigo = prompt(`Digite V (a vista) ou P (a prazo)${i}`).toUpperCase();
-    } while (codigo != "V" && codigo != "P");
-    valor = Number(prompt(`Digite o valor da transação ${i}`));
-    if (codigo == "V") {
-      totalVista += valor;
-    } else {
-      totalPrazo += valor;
-    }
-  }
-  document.getElementById(
-    "resultado"
-  ).innerHTML = `Total à vista ${totalVista} Total à prazo ${totalPrazo}, total geral ${
-    totalPrazo + totalVista
-  } e valor da primeira parcela ${totalPrazo / 3}`;
+
+  let vetor + []
+
+
+
+
+
+
+
 }
 function exe7() {
   let idade,
